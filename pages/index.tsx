@@ -1,9 +1,17 @@
-export default function Home() {
+import tw from "twin.macro";
+
+const Container = tw.div`flex h-screen justify-center items-center`;
+const PinkContainer = tw(Container)`bg-pink-200`;
+const Title = tw.span`font-bold text-xl animate-bounce`;
+
+const Home = () => {
   return (
     <>
-      <div className="flex h-screen justify-center items-center bg-pink-200">
-        <span className="font-bold text-xl animate-bounce">nyfi</span>
-      </div>
+      <PinkContainer>
+        <Title>nyfi</Title>
+      </PinkContainer>
     </>
   );
-}
+};
+
+export default Home;
